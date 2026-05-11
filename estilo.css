@@ -10,6 +10,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 32px;
     min-height: 100vh;
 }
 
@@ -20,23 +21,55 @@ main{
 }
 
 header{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    padding: 12px;
 }
 .actions{
-    display:flex ;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
-    padding: 16px;
-    
+    gap: 36px;
+    border: solid 4px;
+    width: 100%;
+    max-width: 700px;
+    padding: 12px;
+    border-radius: 20px;
+}
+.input-create {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 8px; 
+    width: 100%;
 }
 
+
 .input-crud{
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 20px;  
+    width: 100%;
+    max-width: 350px;
+   align-self: center;
+   border: solid;
+   padding: 26px;
+   transition: 0.3s ease;
+}
+.save-button{
+border-radius: 999px;
+width: 100%;
+max-width: 96px;
+padding: 12px;
+color: #141313;
+font-size: large;
+cursor: pointer;
+}
+.save-button:hover{
+    background-color: rgb(244, 195, 103);
 }
 
 input{
@@ -54,13 +87,15 @@ input:focus{
 
 .add-ctt{
     padding: 16px;
+    border: #000000 solid 2px;
     border-radius: 999px;
     transition: 0.3s ease;
     font-size: 15px;
 }
 
 .add-ctt:hover{
-    background-color: #d6fce9;
+    background-color: #37dd8a;
+    
     color: #000000;
 }
 .add-ctt:active{
@@ -73,9 +108,23 @@ input:focus{
 
 
 .estilizacao{
+    width: 100%;
     max-width: 500px;
-    border: solid 3px;
-  
+    border: solid 4px rgb(52, 51, 51);
+    border-radius: 10px;
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 95%;
+    max-width:1000px;
+    border: solid black 3px;
+    border-radius: 16px;
+    padding: 40px;
+    gap: 40px;
+
 }
 
 .btn-remover{
@@ -102,6 +151,7 @@ input:focus{
     overflow-y: auto;
     list-style: none;
     padding: 10px;
+    padding-top: 0;
     margin: 0;
     background-color: rgb(227, 220, 220);
 
@@ -109,7 +159,7 @@ input:focus{
 .contato{
     display: flex;
     gap:  20px;
-    padding: 30px;
+    padding: 16px;
     border-bottom: 1px solid rgb(28, 27, 27);
     align-items: center;
     transition: 0.3s ease;
