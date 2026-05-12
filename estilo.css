@@ -203,3 +203,21 @@ a{
     text-decoration: none;
     color: inherit;
 }
+.erro{
+    background-color: rgb(245, 92, 92);
+    padding: 10px;
+    border: solid 2px rgb(178, 1, 1);
+    align-self: center;
+    color: #fff;
+    border-radius: 16px;
+    width: fit-content;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+   
+}
+
+.erro-show {
+    opacity: 1;
+    transform: translateY(0);
+}

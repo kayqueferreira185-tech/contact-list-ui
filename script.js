@@ -92,8 +92,10 @@ formulario.appendChild(erroVisual);
 
 function mostrarErro (msg){
     erroVisual.textContent = msg;
+    erroVisual.classList.add('erro-show');
     
 };
 function limparErro() {
     erroVisual.textContent = "";
+    erroVisual.classList.remove('erro-show');
 }
