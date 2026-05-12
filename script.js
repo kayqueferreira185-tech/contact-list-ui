@@ -13,11 +13,18 @@ const inputName = document.querySelector('#nome');
 const inputEmail = document.querySelector('#email');
 const inputTel = document.querySelector('#telefone');
 
+
 botaoSave.addEventListener('click', () =>{
+
 
     const nome = inputName.value;
     const email = inputEmail.value;
     const numeroP = inputTel.value;
+    if (!validaInput(nome, email, numeroP)) {
+        return;
+    }
+    limparErro();
+
     const img = document.createElement('img');
     img.alt = 'avatar padrão';
     img.src = 'imagens/imagem_avatar.png';
@@ -54,8 +61,39 @@ botaoSave.addEventListener('click', () =>{
     li.appendChild(img);
     li.appendChild(divCreate);
     li.appendChild(botaoRemover);
-    
-    
+
     listacontatos.appendChild(li);
 
+    inputName.value = "";
+    inputEmail.value = "";
+    inputTel.value = "";
+    
+
 });
+function validaInput (nome,email,numeroP){
+    if (nome === ""){
+        mostrarErro('Nome inválido');
+        return false;
+    }
+      if (email === ""){
+        mostrarErro('Email inválido');
+        return false;
+      }
+        if (numeroP === ""){
+            mostrarErro('Número inválido');
+            return false;
+        }
+        return true;
+}
+
+const erroVisual = document.createElement('span');
+erroVisual.classList.add('erro');
+formulario.appendChild(erroVisual);
+
+function mostrarErro (msg){
+    erroVisual.textContent = msg;
+    
+};
+function limparErro() {
+    erroVisual.textContent = "";
+}
