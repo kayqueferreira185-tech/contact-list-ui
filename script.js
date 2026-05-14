@@ -8,7 +8,7 @@ botaoform.addEventListener('click', () =>{
 });
 
 const botaoSave = document.querySelector ('.save-button');
-const listacontatos = document.querySelector('.lista-contatos');
+const listaContatos = document.querySelector('.lista-contatos');
 const inputName = document.querySelector('#nome');
 const inputEmail = document.querySelector('#email');
 const inputTel = document.querySelector('#telefone');
@@ -57,7 +57,7 @@ function criarContato(nome, email, numeroP){
     li.appendChild(img);
     li.appendChild(divCreate);
     li.appendChild(criarBotaoRemove());
-    listacontatos.appendChild(li);
+    listaContatos.appendChild(li);
 }
 function criarBotaoRemove(){
   
@@ -109,3 +109,11 @@ function limparErro() {
     erroVisual.textContent = "";
     erroVisual.classList.remove('erro-show');
 }
+
+listaContatos.addEventListener('click',(e) =>{
+     const botaoDelete = e.target.closest('.btn-remover');
+     if (!botaoDelete) return;
+     const contato = botaoDelete.closest('.contato');
+     contato.remove();
+
+});
