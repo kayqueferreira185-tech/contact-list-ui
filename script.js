@@ -117,3 +117,23 @@ listaContatos.addEventListener('click',(e) =>{
      contato.remove();
 
 });
+
+const botaoBusca = document.querySelector ('#busca');
+
+botaoBusca.addEventListener('input', (e) =>{
+     const valorInput =  e.target.value;
+    const contatos = document.querySelectorAll('.contato')
+    for (let i = 0; i < contatos.length; i++){
+       const contatoAtual = contatos[i];
+       const nomeContato = contatoAtual.querySelector('h2')
+       const textoNome = nomeContato.textContent;
+             if (textoNome.toLowerCase().includes(valorInput.toLowerCase())){
+                 contatoAtual.classList.remove('remove');
+
+            }else{
+                 contatoAtual.classList.add('remove');
+                 };
+    }
+
+
+});
