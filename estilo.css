@@ -224,3 +224,7 @@ a{
 .remove{
   display: none;
 }
+
+.svg-dark{
+    width: 25px;
+}
