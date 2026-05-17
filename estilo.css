@@ -260,3 +260,7 @@ a{
     transform: translateY(1px);
     scale: 0.97;
 }
+body.dark {
+    background-color: #1f1f1f;
+
+}

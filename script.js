@@ -137,3 +137,11 @@ botaoBusca.addEventListener('input', (e) =>{
 
 
 });
+const buttonDark = document.querySelector('.button-dark');
+const  corpo = document.querySelector('body');
+
+buttonDark.addEventListener('click',() =>{ 
+    
+    corpo.classList.toggle('dark')
+
+});
